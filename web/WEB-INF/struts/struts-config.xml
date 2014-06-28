@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts>
+	<beans>
+		<bean name="login" class="org.zqm.minimvc.form.LoginForm"/>
+		<bean name="book" class="org.zqm.minimvc.form.BookForm"/>
+	</beans>
+	<action-mapping>
+		<action name="login" type="org.zqm.minimvc.action.LoginAction" path="login">
+			<forward name="success" value="/view/success.jsp">
+			</forward>
+			<forward name="failed" value="/view/failed.jsp">
+			</forward>
+		</action>
+		<action name="book" type="org.zqm.minimvc.action.BookAction" path="book">
+			<forward name="list" value="/view/booklist.jsp">
+			</forward>
+			<forward name="insert" value="/view/bookinsert.jsp">
+			</forward>
+		</action>
+	</action-mapping>
+</struts>
